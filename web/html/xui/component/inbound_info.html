@@ -32,19 +32,19 @@
     <p>tls: <a-tag color="red">closure</a-tag></p>
 </template>
 <p v-if="inbound.tls">
-    tls域名: <a-tag :color="inbound.serverName ? 'green' : 'orange'">[[ inbound.serverName ? inbound.serverName : "none" ]]</a-tag>
+    tls domain name: <a-tag :color="inbound.serverName ? 'green' : 'orange'">[[ inbound.serverName ? inbound.serverName : "none" ]]</a-tag>
 </p>
 <p v-if="inbound.xtls">
-    xtls域名: <a-tag :color="inbound.serverName ? 'green' : 'orange'">[[ inbound.serverName ? inbound.serverName : "none" ]]</a-tag>
+    xtls domain name: <a-tag :color="inbound.serverName ? 'green' : 'orange'">[[ inbound.serverName ? inbound.serverName : "none" ]]</a-tag>
 </p>
 {{end}}
 
 
 {{define "component/inboundInfoComponent"}}
 <div>
-    <p>协议: <a-tag color="green">[[ dbInbound.protocol ]]</a-tag></p>
-    <p>地址: <a-tag color="blue">[[ dbInbound.address ]]</a-tag></p>
-    <p>端口: <a-tag color="green">[[ dbInbound.port ]]</a-tag></p>
+    <p>protocol: <a-tag color="green">[[ dbInbound.protocol ]]</a-tag></p>
+    <p>address: <a-tag color="blue">[[ dbInbound.address ]]</a-tag></p>
+    <p>port: <a-tag color="green">[[ dbInbound.port ]]</a-tag></p>
 
     <template v-if="dbInbound.isVMess">
         <p>uuid: <a-tag color="green">[[ inbound.uuid ]]</a-tag></p>
